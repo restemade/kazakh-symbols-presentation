@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Power of Ambiguity – Presentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background: #f5f7fa;
+        color: #222;
+    }
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        padding: 60px;
+        box-sizing: border-box;
+        display: none;
+    }
+    .slide.active {
+        display: block;
+    }
+    h1, h2 {
+        margin-top: 0;
+        color: #003c8f;
+        font-weight: 600;
+    }
+    ul {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .img-row {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .img-row img {
+        max-width: 22%;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .img-large img {
+        max-width: 45%;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+    <h1>The Power of Ambiguity:<br>National Symbols, Nation-Building and Political Legitimacy in Kazakhstan</h1>
+    <h3>by Sabina & Nafissa Insebayeva (2022)</h3>
+    <h3>Presented by: Darina Zarypkhanova</h3>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+    <h2>Methods Summary</h2>
+    <ul>
+        <li>Main approach: analysis of historical events and political context shaping symbolic containers.</li>
+        <li>The article places strong emphasis on historical events.</li>
+        <li>Academic sources: scholarly articles, academic books, research on nation-building and symbolism.</li>
+        <li>Primary/material sources: banknote designs, national anthems (1992 & 2006), state iconography.</li>
+    </ul>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+    <h2>Ambiguity and Identity</h2>
+    <ul>
+        <li>National symbols in Kazakhstan are intentionally ambiguous.</li>
+        <li>Ambiguity balances competing identity narratives.</li>
+        <li>1992 anthem: symbolic ambiguity to maintain unity.</li>
+        <li>2006 anthem: more Kazakh-centered message.</li>
+        <li>Currency design reflects evolving identity politics.</li>
+    </ul>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+    <h2>1993 Banknote Series</h2>
+    <p>Past-oriented, culturally Kazakh, yet carefully non-divisive.</p>
+
+    <div class="img-row">
+        <img src="images/abay.jpg" alt="Abai">
+        <img src="images/Kurmangazy.jpg" alt="Kurmangazy">
+        <img src="images/Shoqan Valikhanov.jpg" alt="Shoqan Valikhanov">
+        <img src="images/Abulkhair Khan.jpg" alt="Abulkhair Khan">
+    </div>
+
+    <p><i>Notably absent: Kenesary, Amangeldi Imanov, Isatay Datov, Alash leaders.</i></p>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+    <h2>2006 Banknote Series</h2>
+
+    <div class="img-row img-large">
+        <img src="images/Baiterek Tower.jpg" alt="Baiterek">
+        <img src="images/Lines from the anthem  vertical banknote layout.jpg" alt="Banknote Layout">
+    </div>
+
+    
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+    <h2>2011–2014 Series</h2>
+
+    <div class="img-row img-large">
+        <img src="images/Qazaq Eli Monument.jpg" alt="Qazaq Eli">
+        <img src="images/Samruk bird  doves.jpg" alt="Samruk">
+    </div>
+
+    <ul>
+        <li>Shift toward “Kazakhstani civic patriotism”.</li>
+        <li>New imagery: Samruk bird, doves, Mäñgilik El Arch, Ak Orda Palace.</li>
+    </ul>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+    <h2>Symbolic Strategy</h2>
+    <ul>
+        <li>Symbols create continuity with selected historical narratives.</li>
+        <li>Ambiguity unifies diverse groups without direct conflict.</li>
+        <li>Kazakhstan strategically blends ethnic, civic, and multicultural elements.</li>
+    </ul>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide">
+    <h2>Strengths of the Article</h2>
+    <ul>
+        <li>Strong interpretive argument.</li>
+        <li>Rich historical and contextual narrative.</li>
+        <li>Addresses post-Soviet dynamics, ideological debates, northern separatism, Russia’s shifting role.</li>
+    </ul>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide">
+    <h2>Limitations</h2>
+    <ul>
+        <li>Over-reliance on official and textual sources.</li>
+        <li>Methods not fully explicit.</li>
+        <li>No data on public reception.</li>
+        <li>No triangulation (surveys, visual coding, independent data).</li>
+    </ul>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide">
+    <h2>Connection to Course Themes</h2>
+    <ul>
+        <li>Regionalism: diverse histories shape symbolic politics.</li>
+        <li>Shifts in public opinion: symbols adapted for ethnic & civic audiences.</li>
+        <li>Strategic & expressive behavior: symbols used for identity and political goals.</li>
+    </ul>
+</div>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[i].classList.add('active');
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === "ArrowRight") {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    } else if (e.key === "ArrowLeft") {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
+});
+</script>
+
+</body>
+</html>
